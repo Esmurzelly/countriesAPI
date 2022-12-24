@@ -38,6 +38,10 @@ const HomePage = ({countries, setCountries}) => {
         }
     }, [])
 
+    useEffect(() => {
+      handleSearch();
+    }, [countries])
+
     return ( 
         <>
             <Controls onSearch={handleSearch}/>
